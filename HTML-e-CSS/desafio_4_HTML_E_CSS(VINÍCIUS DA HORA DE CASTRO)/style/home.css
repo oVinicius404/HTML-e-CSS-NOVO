@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor_margens: #1b357e;
+    --cor_botoes: #1351db;
+    --cor_cinza_claro: #ebedf3;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 0px;
+    max-width: 100%;
+}
+
+.carro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 72.6vh;
+    justify-content: center;
+    align-items: center;
+}
+.carro_img {
+    width: 100%;
+    padding: 0% 0% 1% 0%;
+}
+
+.carro a {
+    width: 76%;
+    justify-content: center;
+    text-align: center;
+}
+
+.carro_img:hover {
+    transform: scale(1.003);
+    transition: 0.1s;
+}
+
+.aqui_link {
+    font-size: 100%;
+    font-family: "Montserrat", sans-serif;
+}
+

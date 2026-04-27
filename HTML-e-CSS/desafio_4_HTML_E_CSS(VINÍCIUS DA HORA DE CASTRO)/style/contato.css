@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor_margens: #1b357e;
+    --cor_botoes: #1351db;
+    --cor_cinza_claro: #ebedf3;
+}
+
+main {
+    display: flex;
+    width: 100%;
+
+    min-width: 0px;
+    max-width: 100%;
+}
+
+.carro {
+    display: flex;
+    width: 55%;
+    justify-content: end;
+    align-items: center;
+    margin-bottom:4%;
+}
+
+.carro_img {
+    width: 60%;
+}
+
+.sobre {
+    display: flex;
+    width: 100%;
+    padding-bottom: 2%;
+}
+
+.formulario_todo {
+    width: 50%;
+    height: 72.6vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 6%;
+    font-family: "Montserrat", sans-serif;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    min-width: 0px;
+    max-width: 100%;
+}
+
+.contatado {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    min-width: 0px;
+    max-width: 100%;
+}
+
+.formulario {
+    width: 100%;
+    display: flex;
+    font-size: 120%;
+    border-radius: 5px;
+    padding: 2% 0.5% 2% 0.5%;
+    margin-bottom: 5%;
+}
+
+.enviar {
+    display: flex;
+    justify-content: end;
+    padding-top: 3%;
+    width: 100%;    
+
+    min-width: 0px;
+    max-width: 100%;
+}
+
+.enviar_botao {
+    width: 60%;
+    font-size: 120%;
+    padding: 2.5% 0.5% 2.5% 0.5%;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--cor_botoes);
+    color: white;
+    transition: 0.15s;
+}
+
+.enviar_botao:hover {
+    background-color: var(--cor_margens);
+    cursor: pointer;
+    transform: scale(1.05);
+}
