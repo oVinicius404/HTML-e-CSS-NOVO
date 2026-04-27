@@ -10,9 +10,18 @@
     --cor_cinza_claro: #ebedf3;
 }
 
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column
+}
+
 main {
     display: flex;
     width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 
     min-width: 0px;
     max-width: 100%;
@@ -38,11 +47,9 @@ main {
 
 .formulario_todo {
     width: 50%;
-    height: 72.6vh;
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    padding-top: 6%;
+    justify-content: center;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -98,4 +105,24 @@ main {
     background-color: var(--cor_margens);
     cursor: pointer;
     transform: scale(1.05);
+}
+
+@media (max-width: 800px) {
+    main {
+        flex-direction: column;
+    }
+
+    .carro {
+        margin-top: 3%;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .inputs, .contatado{
+        width: 100%;
+    }
+
+    .enviar_botao {
+        margin-bottom: 3%;
+    }
 }
