@@ -34,15 +34,13 @@
             <img class="carro_img" src="images/xls 2.2 diesel.jpg" alt="XLS 2.2 Diesel">
         </div>
 
-        <form class="formulario_todo">
+        <form class="formulario_todo" onsubmit="return Post(this);"> 
 
             <h1 class="sobre">Sobre Você</h1>
             
             <div class="inputs">
                 <input class="formulario" type="text" placeholder="NOME*" name="NOME DE USUÁRIO*">
                 <input class="formulario" type="email" placeholder="E-MAIL*" name="E-MAIL*">
-                <input class="formulario" type="number" placeholder="CPF*" name="CPF*">
-                <input class="formulario" type="text" placeholder="SOBRENOME*" name="SOBRENOME DE USUÁRIO*">
                 <input class="formulario" type="tel" pattern="[0-9]{11}|[0-9]{2} [0-9]{9}|[0-9]{2} [0-9]{5}-[0-9]{4}|[0-9]{2} [0-9]{5} [0-9]{4}" title="Formato esperado: 71 91234-5678" placeholder="TELEFONE*" name="TELEFONE*">
             </div>
             
@@ -53,12 +51,12 @@
                     <option value="Reclamação">Reclamação</option>
                     <option value="Solicitação">Solicitação</option>
                 </select>
+                <input class="formulario" type="text" placeholder="MENSAGEM*" name="MENSAGEM*"> 
                 
                 <div class="enviar">
                     <input type="submit" class="enviar_botao"></input>
                 </div>
             </div>
-            
             
         </form>
 
@@ -91,6 +89,6 @@
 
     </footer>
     
-    <script src="js/compare.js" ></script>
+    <script src="js/form.js" ></script>
 </body>
 </html>

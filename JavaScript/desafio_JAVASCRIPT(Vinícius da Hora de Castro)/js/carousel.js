@@ -1,5 +1,12 @@
+
+
+//carousel
+
+//Array storage class
 let carouselArr = [];
 
+
+//class Carousel
 class Carousel {
     constructor(image, title, url) {
         this.image = image;
@@ -8,37 +15,35 @@ class Carousel {
     }
 
     static Start(arr) {
-        if (arr &&arr.length > 0) {
-            Carousel._items = arr;
-            Carousel._sequence = 0;
-            Carousel.Next();
-            Carousel._interval = setInterval(function() {
-                Carousel.Next();
-            }, 5000);
+        if (arr) {
+
+            if (arr.length > 0) {
+                Carousel._arr = arr;
+                Carousel._sequence = 0;
+                Carousel._size = arr.length;
+                Carousel.Next(); //start
+                Carousel._interval = setInterval(function () { Carousel.Next(1); }, 5000);
+            }
+
         } else {
-            throw "O método Start precisa receber uma Array preenchida.";
+            throw "Method Start need a Array Variable.";
         }
     }
 
-    static Next() {
-        let atual = Carousel._items[Carousel._sequence];
-
-        let divCarousel = document.getElementById("carousel");
-
-        let divTitle = document.getElementById("carousel-title");
-        
-        divCarousel.innerHTML = '<img src="${atual.image}" alt="${atual.title}" class="img-fluid">';
-
-        divTitle.innerHTML = '<p>${atual.title} <a href="${atual.url}">Saiba mais</a></p>';
-
-        divCarousel.style.transition = "all 0.5s ease";
-        divCarousel.style.opacity = "1";
-
-        Carousel._sequence++;
-
-        if (Carousel._sequence >= Carousel._size) {
-            Carousel._sequence = 0;
+    static Next(direction = 1) {
+        if (Carousel._arr.length > 0) {
+            Carousel._sequence = (Carousel._sequence + direction + Carousel._size) % Carousel._size;
+            let item = Carousel._arr[Carousel._sequence];
+            let title = document.getElementById("carousel-title");
+            let carrossel = document.getElementById("carousel");
+            carrossel.innerHTML = 
+            `<button class="carousel-btn" onclick="Carousel.Next(-1)">&#8592</button> 
+            <a class="carousel-link" href="${item.url}">
+                <img class="carousel-image" src="${item.image}">
+            </a>
+            <button class="carousel-btn" onclick="Carousel.Next(1)">&#8594</button>`;
+            `<br>`
+            title.innerHTML = `<a href="${item.url}">${item.title}</a>`;
         }
     }
-}
-
+};

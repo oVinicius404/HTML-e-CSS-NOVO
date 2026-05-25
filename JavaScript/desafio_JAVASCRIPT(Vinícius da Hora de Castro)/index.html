@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="style/home.css">
     <link rel="stylesheet" href="style/headfoot.css">
 
+    <script src="js/carousel.js"></script>
     <title>Ford - Home - Novo Veículo</title>
 </head>
 
@@ -27,33 +28,26 @@
             <a href="index.html" class="cabeçalho_link" id="ativo">Home</a>
             <a href="lançamento.html" class="cabeçalho_link">Lançamento</a>
             <a href="contato.html" class="cabeçalho_link">Contato</a>
-        </nav>
+        </nav> 
 
     </header>
 
     <main>
 
-        div id="carousel">
+        <div id="carousel">
             
         </div>
 
         <div id="carousel-title">
-            <
+            
         </div>
 
         <script>
-            carouselArr.push(new Carousel("imagem_1.jpg","Esta é a nova Ranger Ford 2022. Verifique novidades.","lancamento.html"));
-            carouselArr.push(new Carousel("imagem_2.jpg","Ford a nossa história","#"));
-            carouselArr.push(new Carousel("imagem_3.jpg","Nova Ford Bronco Sport 2022","lancamento.html"));
+            carouselArr.push(new Carousel("images/imagem_1.jpg","Esta é a nova Ranger Ford 2022. Verifique novidades.","lançamento.html"));
+            carouselArr.push(new Carousel("images/imagem_2.jpg","Ford a nossa história","#"));
+            carouselArr.push(new Carousel("images/imagem_3.jpg","Nova Ford Bronco Sport 2022","lançamento.html"));
             Carousel.Start(carouselArr);
         </script>
-        
-        <!-- <div class="carro">
-            <a href="lançamento.html"><img src="images/imagem_1.jpg" alt="carro ford ranger black"
-                    class="carro_img"></a>
-            <p class="aqui_link">Esta é a nova Ranger Ford 2022. Verfique novidades <a href="lançamento.html">aqui.</a>
-            </p>
-        </div> -->
 
     </main>
 
@@ -84,7 +78,6 @@
 
     </footer>
 
-    <script src="js/carousel.js"></script>
 </body>
 
 </html>
