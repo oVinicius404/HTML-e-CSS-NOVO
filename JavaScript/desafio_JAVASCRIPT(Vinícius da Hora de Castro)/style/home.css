@@ -43,7 +43,7 @@ html {
 div#carousel {
     margin-top: 20px;
     text-align: center;
-    width: 90%;
+    width: 83%;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -58,6 +58,11 @@ div#carousel {
     width: 100%; 
     height: auto; 
     display: inline-block;
+    transition: 0.5s;
+}
+
+.carousel-image:hover {
+    transform: scale(1.01);
 }
 
 .carousel-link {
@@ -67,16 +72,18 @@ div#carousel {
 
 .carousel-btn {
     border-radius: 10px;
-    margin: 0 1.5%;
-    padding: 2.5% 1%;
+    margin: 0 3%;
+    padding: 3% 1%;
     background-color: #1351d8;
     color: #fff;
     border: none;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .carousel-btn:hover {
     background: #1b357e;
+    transform: scale(1.05);
 }
 
 div#carousel-title a {
